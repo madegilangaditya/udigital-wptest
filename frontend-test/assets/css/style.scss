@@ -1,0 +1,200 @@
+// Set theme color
+$primary:#2B3DEC;
+$header-bg: rgba(43,61,236,0.06);
+$body-text: #373C3D;
+$light-black: #373F41;
+$secondary:#F18825;
+$secondary-gradient:#F46565;
+$light-gray:#C3CBCD;
+$gray-dark:#737B7D;
+$input-border:#272929;
+$gray-lightest:#F4F5F4;
+
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "header-bg":rgba(43,61,236,0.06),
+        "body-text":$body-text,
+        "light-black":$light-black,
+        "secondary-gradient": $secondary-gradient,
+        "light-gray":$light-gray,
+        "gray-dark":$gray-dark,
+        "input-border":$input-border,
+        "gray-lightest":$gray-lightest
+);
+
+// set grid breakpoints
+$grid-breakpoints: (
+        sm: 0,
+        md: 640px,
+        lg: 992px,
+        xl: 1500px,
+        xxl: 1920px
+);
+
+// Set container max-width
+$container-max-widths: (
+        xs: 200px,
+        sm: 540px,
+        md: 720px,
+        lg: 1110px,
+        xl: 1110px
+);
+
+// Set font 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+$font-base: 'Mulish';
+$font-logo: 'Lato';
+$font-family-base: $font-base;
+$font-size-base:1rem;
+$line-height-base:1.375;
+$body-color:var(--body-text);
+$small-font-size:0.875rem;
+
+
+// set heading font-size
+$h1-font-size:3.125rem;
+$h3-font-size:2rem;
+$h6-font-size:1.125rem;
+$headings-font-weight:700;
+$display1-size:2.75rem;
+$display2-size:2rem;
+$headings-color:#000000;
+
+// Set nav link style
+$navbar-light-color:rgba(55,60,61,1);
+$navbar-light-active-color:var(--primary);
+$navbar-light-hover-color:var(--primary);
+
+// button style
+$btn-padding-y:0.813rem;
+$btn-padding-x:1.125rem;
+$btn-border-width:0;
+$btn-border-radius:0;
+$btn-font-weight:700;
+$btn-font-size:0.875rem;
+
+// Form style
+$form-group-margin-bottom:1.625rem;
+$input-padding-y:1rem;
+$input-color:var(--gray-dark);
+$input-border-color:var(--input-border);
+$input-border-radius:0;
+$input-bg:var(--gray-lightest);
+
+
+
+
+@import "./bootstrap/scss/bootstrap";
+
+
+// Style goes here
+body{
+        letter-spacing: 0.3px;
+}
+
+.light-title{
+        color: $white;
+}
+
+.heavy{
+        font-weight: 900;
+}
+
+.ultra-bold{
+        font-weight: 800;;
+}
+
+.dot{
+        color: var(--secondary);
+}
+
+.small{
+        color: var(--light-black);
+}
+
+.internal{
+        color: var(--gray-dark);
+}
+
+.btn{
+        font-size: 0.875rem;
+}
+
+// Main navbar style
+.main-navbar{
+        background-color: var(--header-bg) !important;
+
+        .navbar-brand{
+                font-family: $font-logo;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+        }
+
+        .navbar-nav{
+                column-gap: 48px;
+                row-gap: 15px;
+
+                .nav-link{
+                        font-size: 0.875rem;
+                        letter-spacing: .2px;
+                        line-height: 1.285;
+                        font-weight: 600;
+                }
+        }
+}
+
+// banner style mobile
+.mobile-reverse{
+        flex-direction: column-reverse;
+}
+
+// services
+.services h6{
+        color: var(--light-black);
+}
+
+.contact{
+        background: linear-gradient(180deg, var(--secondary) 0%, #F46565 100%);
+}
+
+.page-footer{
+        background: var(--light-black);
+        color: var(--light-gray);
+        font-size: .75rem;
+}
+
+// Contact form
+.ex-form{
+        max-width: 550px;
+
+        label{
+                font-size: 1.125rem;
+                color: var(--gray-dark);
+        }
+}
+
+
+@include media-breakpoint-down(md) {
+        h1, .display-1, .display-2{
+                font-size: 1.875rem;
+        }
+
+        h2{
+                font-size: 1.75rem;
+        }
+
+        h3{
+                font-size: 1.563rem;
+        }
+}
+
+@include media-breakpoint-up(lg) {
+        .mobile-reverse{
+                flex-direction: row;
+        }
+}
+
+
